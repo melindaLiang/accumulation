@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+}
+body,html{
+  margin:0;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+.v-index {
+  min-height: 100%;
+  .el-menu {
+    width: 200px;
+    border-right:none;
+    position: fixed;
+    top:60px;
+
+    &.el-menu--collapse {
+      width: 70px;
+    }
+
+    .el-menu-item,
+    .el-submenu{
+      text-align: left;
+    }
+    .el-menu-item-group__title{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .el-submenu .el-menu-item{
+      height: 40px;
+      line-height: 40px;
+    }
+    .v-menu--outer-link{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+    }
+  }
+
+  .v-index--header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(135deg,#4481EB 0,#04BEFE 100%);
+    text-align: left;
+    z-index: 3;
+  }
+
+  .v-body-wrap {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    flex: auto;
+    padding-top: 60px;
+
+    .v-body-left {
+      flex: 0 0 200px;
+      min-height: 120px;
+      position: relative;
+
+      &.v-menu-collapse {
+        flex: 0 0 70px;
+      }
+    }
+
+    .v-body-right {
+      -webkit-box-flex: 1;
+      /*auto (1 1 auto) 页面宽度缩小再放大时，element表格能实现自适应*/
+      flex: auto;
+      overflow-x: hidden;
+      min-height: 120px;
+      background: #f4f4f4;
+    }
+  }
+}

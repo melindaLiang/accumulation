@@ -1,0 +1,60 @@
+.about-vue {
+  padding: 20px;
+
+  .question-list {
+    text-align: left;
+  }
+
+  .v-content h4 {
+    margin: 20px 0 10px;
+  }
+
+  .v-input-example--wrap {
+    display: flex;
+    align-items: center;
+
+    .el-input {
+      width: 200px;
+      margin-right: 20px;
+    }
+  }
+
+  .v-event-wrap {
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+
+    .v-parent {
+      width: 200px;
+      height: 100px;
+      background-color: #6F9BCB;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .v-child {
+        width: 100px;
+        height: 50px;
+        background-color: #ECF5FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+
+    .click-result {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      margin-left: 20px;
+      margin-right: 7px;
+      padding:5px;
+    }
+
+    .clear-click-result {
+      height: 32px;
+    }
+  }
+}
