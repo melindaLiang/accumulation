@@ -8,7 +8,7 @@
     </header>
     <div class="v-body-wrap" :style="{'min-height':min_height+'px'}">
       <div class="v-body-left" :class="{'v-menu-collapse':isCollapse}">
-        <el-menu :default-active="active_menu_home" class="el-menu-vertical-demo" :collapse="isCollapse" :router="true" @open="handleOpen" @close="handleClose">
+        <el-menu :default-active="active_menu_home" class="home-menu" :collapse="isCollapse" :router="true" @open="handleOpen" @close="handleClose">
           <el-menu-item index="HelloWorld" :route="{name:'HelloWorld'}">
             <i class="el-icon-location"></i>
             <span slot="title">主页</span>
@@ -17,10 +17,16 @@
             <i class="el-icon-menu"></i>
             <span slot="title">elementUI相关</span>
           </el-menu-item>
-          <el-menu-item index="aboutVue" :route="{name:'aboutVue'}">
-            <i class="el-icon-menu"></i>
-            <span slot="title">vue相关</span>
-          </el-menu-item>
+          <el-submenu index="aboutVue">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">vue相关</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="vueModifier" :route="{name:'vueModifier'}">vue修饰符</el-menu-item>
+              <el-menu-item index="aboutAxios" :route="{name:'aboutAxios'}">axios相关</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-star-on"></i>

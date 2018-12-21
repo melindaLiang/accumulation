@@ -1,0 +1,22 @@
+.about-axios {
+  padding: 20px;
+
+  .question-list {
+    text-align: left;
+  }
+
+  .v-content h4 {
+    margin: 20px 0 10px;
+  }
+
+  .v-input-example--wrap {
+    display: flex;
+    align-items: center;
+
+    .el-input {
+      width: 200px;
+      margin-right: 20px;
+    }
+  }
+
+}

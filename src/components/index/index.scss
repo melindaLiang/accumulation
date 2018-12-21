@@ -6,10 +6,11 @@ body,html{
   height: 100%;
   box-sizing: border-box;
   text-align: left;
+  font-size: 14px;
 }
 .v-index {
   min-height: 100%;
-  .el-menu {
+  .el-menu.home-menu {
     width: 200px;
     border-right:none;
     position: fixed;
